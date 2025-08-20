@@ -1,11 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech‑Trollhättan – Interactive Mockup</title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Tech‑Trollhättan – Interactive Mockup
+  </title>
   <style>
-    /* ===== Base / Tokens ===== */
+   /* ===== Base / Tokens ===== */
     :root{
       --bg: #f8fafc;           /* neutral-50 */
       --surface:#ffffff;        /* white */
@@ -87,323 +89,599 @@
     .mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}
     .mb-6{margin-bottom:1.5rem}
   </style>
-</head>
-<body>
-  <a href="#places" class="sr-only" style="position:absolute;inset:auto auto auto 8px;background:#fff;border:1px solid var(--border);padding:.4rem .6rem;border-radius:.5rem;clip-path:inset(50%)">Skip to content</a>
-
+ </head>
+ <body>
+  <a class="sr-only" href="#places" style="position:absolute;inset:auto auto auto 8px;background:#fff;border:1px solid var(--border);padding:.4rem .6rem;border-radius:.5rem;clip-path:inset(50%)">
+   Skip to content
+  </a>
   <header>
-    <div class="container navwrap">
-      <button class="brand" data-goto="places">Tech‑Trollhättan</button>
-      <nav class="desktopnav" aria-label="Main menu">
-        <ul>
-          <li><button data-goto="places">Places</button></li>
-          <li><button data-goto="history">History</button></li>
-          <li><button data-goto="today">Today</button></li>
-          <li><button data-goto="museums">Museums & Heritage</button></li>
-          <li><button data-goto="map">Map</button></li>
-          <li><button data-goto="resources">Resources</button></li>
-        </ul>
-      </nav>
-      <button class="hamburger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Open menu">☰</button>
-    </div>
-    <div id="mobilemenu" class="mobilemenu" aria-label="Main menu mobile">
-      <ul>
-        <li><button data-goto="places">Places</button></li>
-        <li><button data-goto="history">History</button></li>
-        <li><button data-goto="today">Today</button></li>
-        <li><button data-goto="museums">Museums & Heritage</button></li>
-        <li><button data-goto="map">Map</button></li>
-        <li><button data-goto="resources">Resources</button></li>
-      </ul>
-    </div>
+   <div class="container navwrap">
+    <button class="brand" data-goto="places">
+     Tech‑Trollhättan
+    </button>
+    <nav aria-label="Main menu" class="desktopnav">
+     <ul>
+      <li>
+       <button data-goto="places">
+        Places
+       </button>
+      </li>
+      <li>
+       <button data-goto="history">
+        History
+       </button>
+      </li>
+      <li>
+       <button data-goto="today">
+        Today
+       </button>
+      </li>
+      <li>
+       <button data-goto="museums">
+        Museums &amp; Heritage
+       </button>
+      </li>
+      <li>
+       <button data-goto="map">
+        Map
+       </button>
+      </li>
+      <li>
+       <button data-goto="resources">
+        Resources
+       </button>
+      </li>
+     </ul>
+    </nav>
+    <button aria-controls="mobilemenu" aria-expanded="false" aria-label="Open menu" class="hamburger">
+     ☰
+    </button>
+   </div>
+   <div aria-label="Main menu mobile" class="mobilemenu" id="mobilemenu">
+    <ul>
+     <li>
+      <button data-goto="places">
+       Places
+      </button>
+     </li>
+     <li>
+      <button data-goto="history">
+       History
+      </button>
+     </li>
+     <li>
+      <button data-goto="today">
+       Today
+      </button>
+     </li>
+     <li>
+      <button data-goto="museums">
+       Museums &amp; Heritage
+      </button>
+     </li>
+     <li>
+      <button data-goto="map">
+       Map
+      </button>
+     </li>
+     <li>
+      <button data-goto="resources">
+       Resources
+      </button>
+     </li>
+    </ul>
+   </div>
   </header>
-
   <main>
-    <section class="container" id="intro" style="padding-top:1.5rem">
-      <h1>A fact‑based overview of Trollhättan’s technical and industrial heritage</h1>
-      <p class="prose">This mockup brings together key places, a timeline of industrial milestones, and today’s innovation environments. Content is grounded in local resources and open data.</p>
-      <div class="actions mt-4">
-        <a class="btn primary" href="#history">View timeline ➜</a>
-        <a class="btn" href="#map">Open map 📍</a>
+   <section class="container" id="intro" style="padding-top:1.5rem">
+    <h1>
+     A fact‑based overview of Trollhättan’s technical and industrial heritage
+    </h1>
+    <p class="prose">
+     This mockup brings together key places, a timeline of industrial milestones, and today’s innovation environments. Content is grounded in local resources and open data.
+    </p>
+    <div class="actions mt-4">
+     <a class="btn primary" href="#history">
+      View timeline ➜
+     </a>
+     <a class="btn" href="#map">
+      Open map 📍
+     </a>
+    </div>
+   </section>
+   <!-- Places -->
+   <section class="container" id="places">
+    <header class="mb-6">
+     <h2>
+      Key historical places
+     </h2>
+     <p class="prose">
+      Click a card to open a short description. (Visual feedback on hover/click)
+     </p>
+    </header>
+    <div class="grid sm-2 lg-3">
+     <!-- Locks & Göta River -->
+     <article class="card">
+      <button class="cardbtn" data-modal-body="Trollhätte Canal and locks are Sweden’s oldest major lock system. The area around the Göta River rapids was developed from the 18th century, shaping the city’s industrial/technical profile. The current locks were inaugurated in 1844 and a new channel was completed in 1916." data-modal-title="Locks &amp; Göta River">
+       <div class="row">
+        <div aria-hidden="" class="iconbox">
+         ⛵
+        </div>
+        <div>
+         <h3>
+          Locks &amp; Göta River
+         </h3>
+         <p class="prose">
+          Sweden’s oldest major lock system. 18th‑century developments; locks 1844; new channel 1916.
+         </p>
+         <span class="tag mt-2">
+          18th c. • 1844 • 1916
+         </span>
+        </div>
+       </div>
+      </button>
+     </article>
+     <!-- Olidan & Håjum -->
+     <article class="card">
+      <button class="cardbtn" data-modal-body="Olidan (opened 1910) was Sweden’s first large‑scale hydroelectric power plant for electricity production. The national project took ~14 years to build and relied on local industrial expertise, especially from NOHAB." data-modal-title="Olidan &amp; Håjum Power Stations">
+       <div class="row">
+        <div aria-hidden="" class="iconbox">
+         ⚡
+        </div>
+        <div>
+         <h3>
+          Olidan &amp; Håjum Power Stations
+         </h3>
+         <p class="prose">
+          Olidan (1910) – Sweden’s first major hydro plant; built over ~14 years with local expertise (NOHAB).
+         </p>
+         <span class="tag mt-2">
+          Hydropower • 1910
+         </span>
+        </div>
+       </div>
+      </button>
+     </article>
+     <!-- Innovatum / NOHAB -->
+     <article class="card">
+      <button class="cardbtn" data-modal-body="Former NOHAB engineering works. Today a hub for technology, innovation and culture, housing Innovatum Science Center, museums and business parks." data-modal-title="Innovatum District (NOHAB)">
+       <div class="row">
+        <div aria-hidden="" class="iconbox">
+         🏭
+        </div>
+        <div>
+         <h3>
+          Innovatum District (NOHAB)
+         </h3>
+         <p class="prose">
+          From heavy engineering to a modern hub for technology, innovation and culture.
+         </p>
+         <span class="tag mt-2">
+          NOHAB • Industrial heritage
+         </span>
+        </div>
+       </div>
+      </button>
+     </article>
+     <!-- Andersinska House -->
+     <article class="card">
+      <button class="cardbtn" data-modal-body="Trollhättan’s oldest preserved residential building from the 18th century, adjacent to historic industrial areas." data-modal-title="Andersinska House (Nordkap)">
+       <div class="row">
+        <div aria-hidden="" class="iconbox">
+         🏛️
+        </div>
+        <div>
+         <h3>
+          Andersinska House (Nordkap)
+         </h3>
+         <p class="prose">
+          Oldest preserved residence (18th c.), right by the historic industrial zones.
+         </p>
+         <span class="tag mt-2">
+          18th c. • Heritage
+         </span>
+        </div>
+       </div>
+      </button>
+     </article>
+    </div>
+   </section>
+   <!-- History / Timeline -->
+   <section class="container" id="history">
+    <header class="mb-6">
+     <h2>
+      Technical &amp; industrial history
+     </h2>
+     <p class="prose">
+      Hydropower, heavy engineering (NOHAB), aviation/automotive (Saab → GKN) and the film industry (Trollywood).
+     </p>
+    </header>
+    <div class="timeline">
+     <div class="timeline-item">
+      <div class="year">
+       18th century
       </div>
-    </section>
-
-    <!-- Places -->
-    <section class="container" id="places">
-      <header class="mb-6">
-        <h2>Key historical places</h2>
-        <p class="prose">Click a card to open a short description. (Visual feedback on hover/click)</p>
-      </header>
-      <div class="grid sm-2 lg-3">
-        <!-- Locks & Göta River -->
-        <article class="card">
-          <button class="cardbtn" data-modal-title="Locks & Göta River" data-modal-body="Trollhätte Canal and locks are Sweden’s oldest major lock system. The area around the Göta River rapids was developed from the 18th century, shaping the city’s industrial/technical profile. The current locks were inaugurated in 1844 and a new channel was completed in 1916.">
-            <div class="row">
-              <div class="iconbox" aria-hidden>⛵</div>
-              <div>
-                <h3>Locks & Göta River</h3>
-                <p class="prose">Sweden’s oldest major lock system. 18th‑century developments; locks 1844; new channel 1916.</p>
-                <span class="tag mt-2">18th c. • 1844 • 1916</span>
-              </div>
-            </div>
-          </button>
-        </article>
-        <!-- Olidan & Håjum -->
-        <article class="card">
-          <button class="cardbtn" data-modal-title="Olidan & Håjum Power Stations" data-modal-body="Olidan (opened 1910) was Sweden’s first large‑scale hydroelectric power plant for electricity production. The national project took ~14 years to build and relied on local industrial expertise, especially from NOHAB.">
-            <div class="row">
-              <div class="iconbox" aria-hidden>⚡</div>
-              <div>
-                <h3>Olidan & Håjum Power Stations</h3>
-                <p class="prose">Olidan (1910) – Sweden’s first major hydro plant; built over ~14 years with local expertise (NOHAB).</p>
-                <span class="tag mt-2">Hydropower • 1910</span>
-              </div>
-            </div>
-          </button>
-        </article>
-        <!-- Innovatum / NOHAB -->
-        <article class="card">
-          <button class="cardbtn" data-modal-title="Innovatum District (NOHAB)" data-modal-body="Former NOHAB engineering works. Today a hub for technology, innovation and culture, housing Innovatum Science Center, museums and business parks.">
-            <div class="row">
-              <div class="iconbox" aria-hidden>🏭</div>
-              <div>
-                <h3>Innovatum District (NOHAB)</h3>
-                <p class="prose">From heavy engineering to a modern hub for technology, innovation and culture.</p>
-                <span class="tag mt-2">NOHAB • Industrial heritage</span>
-              </div>
-            </div>
-          </button>
-        </article>
-        <!-- Andersinska House -->
-        <article class="card">
-          <button class="cardbtn" data-modal-title="Andersinska House (Nordkap)" data-modal-body="Trollhättan’s oldest preserved residential building from the 18th century, adjacent to historic industrial areas.">
-            <div class="row">
-              <div class="iconbox" aria-hidden>🏛️</div>
-              <div>
-                <h3>Andersinska House (Nordkap)</h3>
-                <p class="prose">Oldest preserved residence (18th c.), right by the historic industrial zones.</p>
-                <span class="tag mt-2">18th c. • Heritage</span>
-              </div>
-            </div>
-          </button>
-        </article>
+      <div class="prose">
+       Development around the Göta River rapids lays the foundation for an industrial city.
       </div>
-    </section>
-
-    <!-- History / Timeline -->
-    <section class="container" id="history">
-      <header class="mb-6">
-        <h2>Technical & industrial history</h2>
-        <p class="prose">Hydropower, heavy engineering (NOHAB), aviation/automotive (Saab → GKN) and the film industry (Trollywood).</p>
-      </header>
-      <div class="timeline">
-        <div class="timeline-item"><div class="year">18th century</div><div class="prose">Development around the Göta River rapids lays the foundation for an industrial city.</div></div>
-        <div class="timeline-item"><div class="year">1844</div><div class="prose">The current locks are inaugurated.</div></div>
-        <div class="timeline-item"><div class="year">1910</div><div class="prose">Olidan power station starts operation – Sweden’s first major hydro plant.</div></div>
-        <div class="timeline-item"><div class="year">1916</div><div class="prose">New lock channel completed.</div></div>
-        <div class="timeline-item"><div class="year">1847→</div><div class="prose">NOHAB founded: steam locomotives, water turbines, armaments; major export orders help weather the 1920s downturn.</div></div>
-        <div class="timeline-item"><div class="year">1947</div><div class="prose">First Saab car presented; automotive and aviation grow out of NOHAB’s legacy (→ today’s GKN).</div></div>
-        <div class="timeline-item"><div class="year">1990s→</div><div class="prose">Film i Väst established – ‘Trollywood’ emerges.</div></div>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1844
       </div>
-    </section>
-
-    <!-- Today -->
-    <section class="container" id="today">
-      <header class="mb-6">
-        <h2>Today’s tech & innovation</h2>
-        <p class="prose">Examples of actors and environments in and around Trollhättan.</p>
-      </header>
-      <div class="grid sm-2 lg-3">
-        <article class="card">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🚀</div>
-            <div>
-              <h3>GKN Aerospace</h3>
-              <p class="prose">Continuing the tradition of advanced aero/space engineering rooted in the city’s flygmotor heritage. Activities include materials, engines and manufacturing innovation.</p>
-              <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
-                <span class="tag">Aerospace</span>
-                <button class="btn" data-modal-title="GKN Aerospace" data-modal-body="GKN Aerospace continues Trollhättan’s legacy in aviation and space. Focus areas include advanced materials, engines and production technology, often in collaboration with academia and regional partners.">Read more ➜</button>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🎓</div>
-            <div>
-              <h3>University West</h3>
-              <p class="prose">Research and education in production technology, robotics and Work‑Integrated Learning, with strong ties to local industry and societal sustainability.</p>
-              <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
-                <span class="tag">Academia</span>
-                <button class="btn" data-modal-title="University West" data-modal-body="University West (Högskolan Väst) connects research and industry through Work‑Integrated Learning. Areas include production technology, robotics, welding, and social sustainability.">Read more ➜</button>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="row">
-            <div class="iconbox" aria-hidden>💡</div>
-            <div>
-              <h3>Tech & Innovation Clusters</h3>
-              <p class="prose">Collaborations and companies in environmental tech, smart energy and creative industries. See the municipality’s business pages for initiatives and support.</p>
-              <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
-                <span class="tag">Innovation</span>
-                <button class="btn" data-modal-title="Tech & Innovation Clusters" data-modal-body="The Trollhättan area gathers companies and initiatives in cleantech, smart energy, digitalisation and creative industries, supported by local incubators and business development programs.">Read more ➜</button>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🎬</div>
-            <div>
-              <h3>Film i Väst / ‘Trollywood’</h3>
-              <p class="prose">Sweden’s film capital: production company, studios and regional investments that earned Trollhättan the nickname ‘Trollywood’.</p>
-              <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
-                <span class="tag">Creative industry</span>
-                <button class="btn" data-modal-title="Film i Väst / ‘Trollywood’" data-modal-body="Film i Väst and studio facilities have turned Trollhättan into ‘Trollywood’, a hub for Swedish filmmaking with numerous national and international productions.">Read more ➜</button>
-              </div>
-            </div>
-          </div>
-        </article>
+      <div class="prose">
+       The current locks are inaugurated.
       </div>
-    </section>
-
-    <!-- Museums & Heritage -->
-    <section class="container" id="museums">
-      <header class="mb-6">
-        <h2>Local museums, heritage & education</h2>
-        <p class="prose">Destinations and institutions connected to industry, history and learning.</p>
-      </header>
-      <div class="grid sm-2 lg-3">
-        <a class="card" href="#" aria-label="Innovatum Science Center">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🔬</div>
-            <div>
-              <h3>Innovatum Science Center</h3>
-              <p class="prose">Exhibitions on technology, industry and sustainability; nearby testbeds and incubators.</p>
-            </div>
-          </div>
-        </a>
-        <a class="card" href="#" aria-label="Saab Car Museum">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🚗</div>
-            <div>
-              <h3>Saab Car Museum</h3>
-              <p class="prose">Saab’s journey from aviation to automobiles.</p>
-            </div>
-          </div>
-        </a>
-        <a class="card" href="#" aria-label="Trollhättan City Museum">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🏘️</div>
-            <div>
-              <h3>Trollhättan City Museum</h3>
-              <p class="prose">Stories of the city and region: canal, locks and industries.</p>
-            </div>
-          </div>
-        </a>
-        <a class="card" href="https://prismavg.se/" target="_blank" rel="noreferrer" aria-label="Photo & Association Archive (prismavg)">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🖼️</div>
-            <div>
-              <h3>Photo & Association Archive (prismavg)</h3>
-              <p class="prose">Digitised photos, documents and local narratives.</p>
-            </div>
-          </div>
-        </a>
-        <a class="card" href="#" aria-label="University West">
-          <div class="row">
-            <div class="iconbox" aria-hidden>🎓</div>
-            <div>
-              <h3>University West</h3>
-              <p class="prose">Research/education in technology and social sustainability.</p>
-            </div>
-          </div>
-        </a>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1910
       </div>
-    </section>
-
-    <!-- Map -->
-    <section class="container" id="map">
-      <header class="mb-6">
-        <h2>Interactive map (mockup)</h2>
-        <p class="prose">Click a point to open a short description.</p>
-      </header>
-      <div class="mapwrap">
-        <svg id="svgmap" viewBox="0 0 800 420" role="img" aria-label="Stylised map of Trollhättan" style="width:100%;height:clamp(18rem,40vw,24rem)">
-          <rect x="0" y="0" width="800" height="420" fill="#eef2ff" />
-          <!-- Göta River path -->
-          <path d="M100 0 C 200 120, 240 160, 260 210 C 280 260, 350 280, 420 300 C 520 330, 640 360, 800 420" fill="none" stroke="#60a5fa" stroke-width="22" opacity="0.9" />
-          <!-- Points -->
-          <g class="mapbtn" tabindex="0" data-title="Locks & Göta River" data-body="Trollhätte Canal and locks are Sweden’s oldest major lock system. Developed from the 18th century; locks 1844; new channel 1916." transform="translate(240,190)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-          <g class="mapbtn" tabindex="0" data-title="Olidan & Håjum" data-body="Olidan (1910) – Sweden’s first major hydro plant; built over ~14 years with local expertise (NOHAB)." transform="translate(330,240)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-          <g class="mapbtn" tabindex="0" data-title="Innovatum / NOHAB" data-body="Former NOHAB engineering works – now a hub for technology, innovation and culture." transform="translate(420,300)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-          <g class="mapbtn" tabindex="0" data-title="University West" data-body="Research and education in production technology, robotics and WIL." transform="translate(470,320)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-          <g class="mapbtn" tabindex="0" data-title="GKN Aerospace" data-body="Advanced aero/space engineering and manufacturing innovation." transform="translate(560,340)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-          <g class="mapbtn" tabindex="0" data-title="Andersinska House" data-body="Oldest preserved residence (18th c.), near historic industrial areas." transform="translate(280,220)">
-            <circle r="10" fill="#059669"></circle>
-            <circle r="18" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"></circle>
-          </g>
-        </svg>
-        <div id="tooltip" class="tooltip" hidden>Tooltip</div>
+      <div class="prose">
+       Olidan power station starts operation – Sweden’s first major hydro plant.
       </div>
-    </section>
-
-    <!-- Resources -->
-    <section class="container" id="resources">
-      <header class="mb-6">
-        <h2>Digital resources & open data</h2>
-        <p class="prose">Use these sources to deepen the factual content.</p>
-      </header>
-      <ul class="prose" style="padding-left:1rem">
-        <li><a href="https://prismavg.se/" target="_blank" rel="noreferrer">prismavg.se</a>: Photo and story archive.</li>
-        <li><a href="https://www.trollhattan.se/startsida/kommun-och-politik/kommunfakta/trollhattans-historia/" target="_blank" rel="noreferrer">Trollhättan history (municipality)</a></li>
-        <li><a href="https://innovatumsciencecenter.se/kulturarv/trollhattans-historia/" target="_blank" rel="noreferrer">Innovatum heritage: Trollhättan’s history</a></li>
-        <li><a href="https://www.innovatum.se/wp-content/uploads/2014/05/kortnohabhistorik.pdf" target="_blank" rel="noreferrer">NOHAB history (PDF)</a></li>
-        <li><a href="https://www.trollhattan.se/startsida/jobbochforetagande/darfor-trollhattan/" target="_blank" rel="noreferrer">Business & tech (municipality)</a></li>
-      </ul>
-    </section>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1916
+      </div>
+      <div class="prose">
+       New lock channel completed.
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1847→
+      </div>
+      <div class="prose">
+       NOHAB founded: steam locomotives, water turbines, armaments; major export orders help weather the 1920s downturn.
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1947
+      </div>
+      <div class="prose">
+       First Saab car presented; automotive and aviation grow out of NOHAB’s legacy (→ today’s GKN).
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="year">
+       1990s→
+      </div>
+      <div class="prose">
+       Film i Väst established – ‘Trollywood’ emerges.
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Today -->
+   <section class="container" id="today">
+    <header class="mb-6">
+     <h2>
+      Today’s tech &amp; innovation
+     </h2>
+     <p class="prose">
+      Examples of actors and environments in and around Trollhättan.
+     </p>
+    </header>
+    <div class="grid sm-2 lg-3">
+     <article class="card">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🚀
+       </div>
+       <div>
+        <h3>
+         GKN Aerospace
+        </h3>
+        <p class="prose">
+         Continuing the tradition of advanced aero/space engineering rooted in the city’s flygmotor heritage. Activities include materials, engines and manufacturing innovation.
+        </p>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+         <span class="tag">
+          Aerospace
+         </span>
+         <button class="btn" data-modal-body="GKN Aerospace continues Trollhättan’s legacy in aviation and space. Focus areas include advanced materials, engines and production technology, often in collaboration with academia and regional partners." data-modal-title="GKN Aerospace">
+          Read more ➜
+         </button>
+        </div>
+       </div>
+      </div>
+     </article>
+     <article class="card">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🎓
+       </div>
+       <div>
+        <h3>
+         University West
+        </h3>
+        <p class="prose">
+         Research and education in production technology, robotics and Work‑Integrated Learning, with strong ties to local industry and societal sustainability.
+        </p>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+         <span class="tag">
+          Academia
+         </span>
+         <button class="btn" data-modal-body="University West (Högskolan Väst) connects research and industry through Work‑Integrated Learning. Areas include production technology, robotics, welding, and social sustainability." data-modal-title="University West">
+          Read more ➜
+         </button>
+        </div>
+       </div>
+      </div>
+     </article>
+     <article class="card">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        💡
+       </div>
+       <div>
+        <h3>
+         Tech &amp; Innovation Clusters
+        </h3>
+        <p class="prose">
+         Collaborations and companies in environmental tech, smart energy and creative industries. See the municipality’s business pages for initiatives and support.
+        </p>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+         <span class="tag">
+          Innovation
+         </span>
+         <button class="btn" data-modal-body="The Trollhättan area gathers companies and initiatives in cleantech, smart energy, digitalisation and creative industries, supported by local incubators and business development programs." data-modal-title="Tech &amp; Innovation Clusters">
+          Read more ➜
+         </button>
+        </div>
+       </div>
+      </div>
+     </article>
+     <article class="card">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🎬
+       </div>
+       <div>
+        <h3>
+         Film i Väst / ‘Trollywood’
+        </h3>
+        <p class="prose">
+         Sweden’s film capital: production company, studios and regional investments that earned Trollhättan the nickname ‘Trollywood’.
+        </p>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+         <span class="tag">
+          Creative industry
+         </span>
+         <button class="btn" data-modal-body="Film i Väst and studio facilities have turned Trollhättan into ‘Trollywood’, a hub for Swedish filmmaking with numerous national and international productions." data-modal-title="Film i Väst / ‘Trollywood’">
+          Read more ➜
+         </button>
+        </div>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Museums & Heritage -->
+   <section class="container" id="museums">
+    <header class="mb-6">
+     <h2>
+      Local museums, heritage &amp; education
+     </h2>
+     <p class="prose">
+      Destinations and institutions connected to industry, history and learning.
+     </p>
+    </header>
+    <div class="grid sm-2 lg-3">
+     <a aria-label="Innovatum Science Center" class="card" href="#">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🔬
+       </div>
+       <div>
+        <h3>
+         Innovatum Science Center
+        </h3>
+        <p class="prose">
+         Exhibitions on technology, industry and sustainability; nearby testbeds and incubators.
+        </p>
+       </div>
+      </div>
+     </a>
+     <a aria-label="Saab Car Museum" class="card" href="#">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🚗
+       </div>
+       <div>
+        <h3>
+         Saab Car Museum
+        </h3>
+        <p class="prose">
+         Saab’s journey from aviation to automobiles.
+        </p>
+       </div>
+      </div>
+     </a>
+     <a aria-label="Trollhättan City Museum" class="card" href="#">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🏘️
+       </div>
+       <div>
+        <h3>
+         Trollhättan City Museum
+        </h3>
+        <p class="prose">
+         Stories of the city and region: canal, locks and industries.
+        </p>
+       </div>
+      </div>
+     </a>
+     <a aria-label="Photo &amp; Association Archive (prismavg)" class="card" href="https://prismavg.se/" rel="noreferrer" target="_blank">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🖼️
+       </div>
+       <div>
+        <h3>
+         Photo &amp; Association Archive (prismavg)
+        </h3>
+        <p class="prose">
+         Digitised photos, documents and local narratives.
+        </p>
+       </div>
+      </div>
+     </a>
+     <a aria-label="University West" class="card" href="#">
+      <div class="row">
+       <div aria-hidden="" class="iconbox">
+        🎓
+       </div>
+       <div>
+        <h3>
+         University West
+        </h3>
+        <p class="prose">
+         Research/education in technology and social sustainability.
+        </p>
+       </div>
+      </div>
+     </a>
+    </div>
+   </section>
+   <!-- Map -->
+   <section class="container" id="map">
+    <header class="mb-6">
+     <h2>
+      Interactive map (mockup)
+     </h2>
+     <p class="prose">
+      Click a point to open a short description.
+     </p>
+    </header>
+    <div class="mapwrap">
+     <svg aria-label="Stylised map of Trollhättan" id="svgmap" role="img" style="width:100%;height:clamp(18rem,40vw,24rem)" viewbox="0 0 800 420">
+      <rect fill="#eef2ff" height="420" width="800" x="0" y="0">
+      </rect>
+      <!-- Göta River path -->
+      <path d="M100 0 C 200 120, 240 160, 260 210 C 280 260, 350 280, 420 300 C 520 330, 640 360, 800 420" fill="none" opacity="0.9" stroke="#60a5fa" stroke-width="22">
+      </path>
+      <!-- Points -->
+      <g class="mapbtn" data-body="Trollhätte Canal and locks are Sweden’s oldest major lock system. Developed from the 18th century; locks 1844; new channel 1916." data-title="Locks &amp; Göta River" tabindex="0" transform="translate(240,190)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+      <g class="mapbtn" data-body="Olidan (1910) – Sweden’s first major hydro plant; built over ~14 years with local expertise (NOHAB)." data-title="Olidan &amp; Håjum" tabindex="0" transform="translate(330,240)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+      <g class="mapbtn" data-body="Former NOHAB engineering works – now a hub for technology, innovation and culture." data-title="Innovatum / NOHAB" tabindex="0" transform="translate(420,300)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+      <g class="mapbtn" data-body="Research and education in production technology, robotics and WIL." data-title="University West" tabindex="0" transform="translate(470,320)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+      <g class="mapbtn" data-body="Advanced aero/space engineering and manufacturing innovation." data-title="GKN Aerospace" tabindex="0" transform="translate(560,340)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+      <g class="mapbtn" data-body="Oldest preserved residence (18th c.), near historic industrial areas." data-title="Andersinska House" tabindex="0" transform="translate(280,220)">
+       <circle fill="#059669" r="10">
+       </circle>
+       <circle fill="none" opacity="0.6" r="18" stroke="#10b981" stroke-width="2">
+       </circle>
+      </g>
+     </svg>
+     <div class="tooltip" hidden="" id="tooltip">
+      Tooltip
+     </div>
+    </div>
+   </section>
+   <!-- Resources -->
+   <section class="container" id="resources">
+    <header class="mb-6">
+     <h2>
+      Digital resources &amp; open data
+     </h2>
+     <p class="prose">
+      Use these sources to deepen the factual content.
+     </p>
+    </header>
+    <ul class="prose" style="padding-left:1rem">
+     <li>
+      <a href="https://prismavg.se/" rel="noreferrer" target="_blank">
+       prismavg.se
+      </a>
+      : Photo and story archive.
+     </li>
+     <li>
+      <a href="https://www.trollhattan.se/startsida/kommun-och-politik/kommunfakta/trollhattans-historia/" rel="noreferrer" target="_blank">
+       Trollhättan history (municipality)
+      </a>
+     </li>
+     <li>
+      <a href="https://innovatumsciencecenter.se/kulturarv/trollhattans-historia/" rel="noreferrer" target="_blank">
+       Innovatum heritage: Trollhättan’s history
+      </a>
+     </li>
+     <li>
+      <a href="https://www.innovatum.se/wp-content/uploads/2014/05/kortnohabhistorik.pdf" rel="noreferrer" target="_blank">
+       NOHAB history (PDF)
+      </a>
+     </li>
+     <li>
+      <a href="https://www.trollhattan.se/startsida/jobbochforetagande/darfor-trollhattan/" rel="noreferrer" target="_blank">
+       Business &amp; tech (municipality)
+      </a>
+     </li>
+    </ul>
+   </section>
   </main>
-
   <footer>
-    <div class="container foot">
-      <p>© 2025 Tech‑Trollhättan</p>
-      <nav aria-label="Footer links" style="display:flex;gap:1rem">
-        <a href="#">Accessibility</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
-      </nav>
-    </div>
+   <div class="container foot">
+    <p>
+     © 2025 Tech‑Trollhättan
+    </p>
+    <nav aria-label="Footer links" style="display:flex;gap:1rem">
+     <a href="#">
+      Accessibility
+     </a>
+     <a href="#">
+      Contact
+     </a>
+     <a href="#">
+      About
+     </a>
+    </nav>
+   </div>
   </footer>
-
   <!-- Modal / Overlay -->
-  <div id="overlay" class="overlay" aria-hidden="true"></div>
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modaltitle" aria-describedby="modalbody">
-    <div class="head">
-      <h3 id="modaltitle" style="margin:0;font-size:1.1rem"></h3>
-      <button class="close" aria-label="Close (Esc)">✕</button>
-    </div>
-    <p id="modalbody" class="prose mt-2"></p>
+  <div aria-hidden="true" class="overlay" id="overlay">
   </div>
-
+  <div aria-describedby="modalbody" aria-labelledby="modaltitle" aria-modal="true" class="modal" id="modal" role="dialog">
+   <div class="head">
+    <h3 id="modaltitle" style="margin:0;font-size:1.1rem">
+    </h3>
+    <button aria-label="Close (Esc)" class="close">
+     ✕
+    </button>
+   </div>
+   <p class="prose mt-2" id="modalbody">
+   </p>
+  </div>
   <script>
-    // ===== Helper: smooth goto =====
+   // ===== Helper: smooth goto =====
     document.querySelectorAll('[data-goto]').forEach(btn=>{
       btn.addEventListener('click',()=>{
         const id = btn.getAttribute('data-goto');
@@ -486,5 +764,5 @@
       g.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); openModal(title, body); }});
     });
   </script>
-</body>
+ </body>
 </html>
